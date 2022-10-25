@@ -9,10 +9,7 @@ def get_count_char(str_):  # посчитать количество каждо�
     dict_char = dict()
     for i in low_str:
         if i.isalpha():
-            if dict_char.get(i):
-                dict_char[i] += 1
-            else:
-                dict_char.setdefault(i, 1)
+            dict_char[i] = dict_char.get(i, 0) + 1
 
     return dict_char
 
